@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="css/eventsstyle.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="nav-container">
+        <nav>
+            <div class="nav-logo">EVENTS</div>
+            <div class="nav-links">
+                <a href="#about">About Us</a>
+                <a href="#events">Events</a>
+                <a href="#members">Members</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+       
+        <div class="row">
+            <!-- Event 1 -->
+            <div class="event-box">
+                <div class="image-container">
+                    <img src="image\Inaugral poster.jpeg" alt="Event Poster 1">
+                </div>
+                <div class="event-details">
+                    <div class="event-title">Event Title 1</div>
+                    <div class="event-location">Location: Auditorium 1</div>
+                    <div class="event-description">Description:whububfbhwheijnfiwerhwehuh9iewhihhiwehihfiwjheioriwhrifhwiedfiwjhfihwiojrfiwejifjijisehfiwheihrfwheirhwiuhrfirheihfihseihrfheirhwieeherh.</div>
+                </div>
+            </div>
+
+            <!-- Event 2 -->
+            <div class="event-box">
+                <div class="image-container">
+                    <img src="image\IMG-20240916-WA0089.jpg" alt="Event Poster 2">
+                </div>
+                <div class="event-details">
+                    <div class="event-title">Event Title 2</div>
+                    <div class="event-location">Location: Conference Hall</div>
+                    <div class="event-description">Description: A brief description of event 2.</div>
+                </div>
+            </div>
+
+            <!-- Event 3 -->
+            <div class="event-box">
+                <div class="image-container">
+                    <img src="image\Figma Poster.jpg" alt="Event Poster 3">
+                </div>
+                <div class="event-details">
+                    <div class="event-title">Event Title 3</div>
+                    <div class="event-location">Location: Seminar Room</div>
+                    <div class="event-description">Description: A brief description of event 3.</div>
+                </div>
+            </div>
+
+            <!-- Event 4 -->
+            <div class="event-box">
+                <div class="image-container">
+                    <img src="image\Poster.jpg" alt="Event Poster 4">
+                </div>
+                <div class="event-details">
+                    <div class="event-title">Event Title 4</div>
+                    <div class="event-location">Location: Lab 101</div>
+                    <div class="event-description">Description: A brief description of event 4.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="https://ieee.org">IEEE.org</a></li>
+                    <li><a href="https://ieeexplore.ieee.org">IEEE Xplore Digital Library</a></li>
+                    <li><a href="https://ieeecollabratec.ieee.org">IEEE Collabratec</a></li>
+                    <li><a href="https://spectrum.ieee.org">IEEE Spectrum Online</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="https://facebook.com">Facebook</a></li>
+                    <li><a href="https://twitter.com">Twitter</a></li>
+                    <li><a href="https://instagram.com">Instagram</a></li>
+                    <li><a href="https://linkedin.com">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Address</h3>
+                <p>DIGITAL UNIVERSITY OF,<br> Trivandrum, Kerala,<br> India</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>Email: info@example.com</p>
+                <p>Phone: +91 12345 67890</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Navbar Toggle -->
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-container').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
