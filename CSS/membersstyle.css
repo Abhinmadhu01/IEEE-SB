@@ -23,7 +23,7 @@ header {
 header .logo {
     width: 100px;
     height: 50px;
-    margin-right: 10px;
+    margin-right: -10px;
 }
 
 header h1 {
