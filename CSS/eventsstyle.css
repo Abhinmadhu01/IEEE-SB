@@ -87,9 +87,8 @@ header h1 {
 }
 
 .image-container {
-    width: 340px;
-    height: 350px;
     overflow: hidden;
+    display: block;
 }
 
 .image-container img {
