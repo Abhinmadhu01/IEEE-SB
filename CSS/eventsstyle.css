@@ -102,18 +102,22 @@ header h1 {
     background-color: #f9f9f9;
     text-align: left;
     border-top: 1px solid #ddd;
+
 }
 
 .event-title {
     font-size: 1.5em;
     color: #03294f;
     margin-bottom: 10px;
+     
+
 }
 
 .event-location, .event-description {
     font-size: 1em;
     margin-bottom: 5px;
     color: #666;
+    
 }
 
 .event-description {
@@ -121,6 +125,7 @@ header h1 {
     line-height: 1.5;
     white-space: normal;
     text-align: justify;
+    
 }
 
 @media screen and (max-width: 768px) {

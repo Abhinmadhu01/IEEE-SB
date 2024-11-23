@@ -1,0 +1,186 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #03294f;
+    color: white;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+header .logo {
+    width: 100px;
+    height: 50px;
+    margin-right: -10px;
+    
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.nav-container {
+    display: flex;
+    gap: 15px; /* Space between navigation links */
+}
+
+.nav-container a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s ease, color 0.2s ease; /* Smooth transition effect */
+}
+
+.nav-container a:hover {
+    text-decoration: none;
+    color: #0ab9f9; /* Bright yellow, for example */
+    transform: scale(1.1); /* Slightly enlarge the text */
+}
+
+.event-report {
+    padding: 20px;
+   
+    margin: auto;
+}
+#event-title {
+    font-size: 36px; /* Larger font size for prominence */
+    font-weight: bold; /* Make it stand out */
+    text-align: center; /* Center align the title */
+    color: #0056b3; /* A strong, appealing color */
+    text-transform: uppercase; /* Makes the title look bold and formal */
+    margin-bottom: 10px; /* Add space below the title */
+    letter-spacing: 1.5px; /* Slight spacing for a modern look */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+#event-date {
+    font-size: 16px; /* Slightly larger for readability */
+    color: #555; /* Neutral gray for a clean look */
+    text-align: center; /* Center the text */
+    margin-bottom: 20px; /* Add spacing below the date */
+    font-style: italic; /* Subtle elegance with italics */
+    letter-spacing: 0.5px; /* Slight spacing for a refined look */
+}
+
+
+#event-description {
+    font-size: 18px; /* Larger font size for readability */
+    line-height: 1.6; /* Increase line spacing for better readability */
+    color: #333; /* Darker color for contrast */
+    text-align: justify; /* Align text for a clean look */
+    background-color: #f9f9f9; /* Light background to make it stand out */
+    padding: 15px; /* Add padding around the text */
+    border-radius: 5px; /* Slight rounding for softer edges */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+#event-description strong {
+    color: #007BFF; /* Highlight important words in the description */
+    font-weight: bold;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 800px; /* Define the maximum width */
+    max-height: 450px; /* Define a consistent height */
+    margin: auto;
+    overflow: hidden; /* Ensure no overflow */
+    background-color: #f0f0f0; /* Optional: add a neutral background */
+    border-radius: 10px; /* Optional: round the corners */
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    object-position: center; /* Centers the image content */
+}
+
+.slide {
+    display: none;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 20px;
+}
+
+.footer-section h2 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-section img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}

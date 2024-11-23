@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Report</title>
+    <link rel="stylesheet" href="../../css/evpage.css">
+</head>
+<body>
+    <!-- Include Header -->
+    <header>
+        <div class="header-left">
+            <img src="../../images/Logo/duk logo.png" alt="DUK Logo" class="logo">
+            <h1> IEEE DUK SB</h1>
+        </div>
+        <nav class="nav-container">
+            <a href="../../index.html">Home</a>
+            <a href="events.html">Events</a>
+            <a href="members.html">Members</a>
+            <a href="resources.html">Resources</a>
+            <a href="aboutus.html">About Us</a>
+        </nav>
+    </header>
+
+    <!-- Event Report Section -->
+    <main>
+        <div class="event-report">
+            <h1 id="event-title">IEEE KERALA GRADUATE STUDENT
+                COMMUNITY TRAVANCORE HUB INAUGURATION</h1>
+            <p id="event-date"> 11 September 2024</p>
+            <p id="event-description">
+                The IEEE Kerala Graduate Student Community's Travancore Hub Inauguration took
+place on 11th September 2024 at the Kerala University of Digital Science Innovation
+and Technology. The event, organized by the IEEE Kerala Section, featured speeches
+from key leaders. Prof. Muhammed Kasim S, IEEE Kerala Section Chair, reflected on
+IEEE’s journey in Kerala, discussing the formation of student branches, the upcoming
+Region 10 split in 2028, and the role of leadership teams. Prof. Nandan S highlighted
+initiatives aimed at improving student engagement and developing leadership skills.
+Prof. Alex P James discussed collaborative efforts between DUK and IEEE, such as
+partnerships with prestigious universities and the development of over 60 products in
+three years. The event also emphasized the importance of elections in IEEE, with a
+video message from Sameer, a candidate for the 2024-26 elections. The inauguration
+ended with a vote of thanks, marking a key moment for student collaboration within
+the IEEE community
+            </p>
+
+            <!-- Slideshow Section -->
+            <div class="slideshow-container">
+                <div class="slide fade">
+                    <img src="../../images/Event Posters/Inauguration SB/Inauguration ceremony/IMG-20240911-WA0086(1).jpg" alt="Event Image 1" style="width:100%">
+                </div>
+                <div class="slide fade">
+                    <img src="../../images/Event Posters/Inauguration SB/Inauguration ceremony/IMG-20240911-WA0099.jpg" alt="Event Image 2" style="width:100%">
+                </div>
+                <div class="slide fade">
+                    <img src="../../images/Event Posters/Inauguration SB/Inauguration ceremony/IMG-20240911-WA0247.jpg" alt="Event Image 3" style="width:100%">
+                </div>
+                <div class="slide fade">
+                    <img src="../../images/Event Posters/Inauguration SB/Inauguration ceremony/IMG-20240911-WA0105.jpg" alt="Event Image 1" style="width:100%">
+                </div>
+                <div class="slide fade">
+                    <img src="../../images/Event Posters/Inauguration SB/Inauguration ceremony/IMG-20240911-WA0247.jpg" alt="Event Image 1" style="width:100%">
+                </div>
+            </div>
+            <br>
+            <!-- Dots for Slide Navigation -->
+            <div style="text-align:center">
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span>
+                <span class="dot"></span> 
+                <span class="dot"></span>  
+            </div>
+        </div>
+    </main>
+
+    <!-- Include Footer -->
+    <footer>
+        <div class="footer-section follow-us">
+            <h2>Follow us on</h2>
+            <ul>
+                <li><a href="https://facebook.com" target="_blank"><img src="../images/Logo/Facebook (1).png"
+                            alt="Facebook"> Facebook</a></li>
+                <li><a href="https://instagram.com" target="_blank"><img src="../images/Logo/instagram.png"
+                            alt="Instagram"> Instagram</a></li>
+                <li><a href="https://twitter.com" target="_blank"><img src="../images/Logo/" alt="Twitter"> Twitter</a>
+                </li>
+                <li><a href="https://duk.ac.in" target="_blank"><img src="../images/Logo/duk logo.png"
+                            alt="DUK Website"> DUK Website</a></li>
+            </ul>
+        </div>
+        <div class="footer-section our-workshops">
+            <h2>Our Workshops</h2>
+            <ul>
+                <li><a href="path-to-workshop1">Workshop Topic 1</a></li>
+                <li><a href="path-to-workshop2">Workshop Topic 2</a></li>
+                <li><a href="path-to-workshop3">Workshop Topic 3</a></li>
+                <li><a href="path-to-workshop4">Workshop Topic 4</a></li>
+            </ul>
+        </div>
+        <div class="footer-section college-address">
+            <h2>Contact Us</h2>
+            <p>Digital University Kerala<br>Technocity Campus Mangalapuram <br>Thonnakkal P.O, Kerala 695317</p>
+        </div>
+        <div class="footer-section useful-links">
+            <h2>Useful Links</h2>
+            <ul>
+                <li><a href="https://www.ieee.org/">IEEE.org</a></li>
+                <li><a href="https://ieeekerala.org/">IEEE KERALA SECTION</a></li>
+                <li><a href="https://www.ieeer10.org/">IEEE REGION 10</a></li>
+                <li><a href="https://www.ieee.org/membership/join/index.html?WT.mc_id=hc_join">JOIN IEEE</a></li>
+                <li><a href="https://www.ieee.org/sitemap.html">More Links</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script >
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            let dots = document.getElementsByClassName("dot");
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+
+            setTimeout(showSlides, 3000); // Change slide every 3 seconds
+        }
+
+        function currentSlide(n) {
+            slideIndex = n - 1;
+            showSlides();
+        }
+
+    </script>
+</body>
+</html>
