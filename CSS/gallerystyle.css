@@ -1,0 +1,166 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #03294f;
+    color: white;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+header .logo {
+    width: 100px;
+    height: 50px;
+    margin-right: -10px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 7px;
+}
+
+.nav-container {
+    display: flex;
+    gap: 15px; /* Space between navigation links */
+}
+
+.nav-container a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s ease, color 0.2s ease; /* Smooth transition effect */
+}
+
+.nav-container a:hover {
+    text-decoration: none;
+    color: #0ab9f9; /* Bright yellow, for example */
+    transform: scale(1.1); /* Slightly enlarge the text */
+}
+
+
+
+
+
+
+.slideshow-container {
+    position: relative;
+    max-width: 60%; /* Adjust the width, e.g., 80% of the viewport */
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(160, 115, 115, 0.2); /* Optional: Add a shadow */
+}
+
+.slide img {
+    width: 100%; /* Ensure the image fits the container */
+    height: 100%; /* Adjust to match container height */
+    object-fit:fill; /* Maintain aspect ratio and fill the container */
+}
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 50px;
+    background: #f9f9f9;
+}
+
+.gallery img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Fading animation for slides */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+@media (max-width: 768px) { /* For tablets and smaller devices */
+    .slideshow-container {
+        width: 90%; /* Increase the width slightly for smaller devices */
+    }
+}
+
+@media (max-width: 480px) { /* For phones */
+    .slideshow-container {
+        width: 100%; /* Full width for very small devices */
+    }
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 20px;
+}
+
+.footer-section h2 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-section img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
