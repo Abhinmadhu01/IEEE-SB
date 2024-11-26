@@ -79,7 +79,7 @@ header h1 {
     line-height: 1.6; /* Increase line spacing for better readability */
     color: #333; /* Darker color for contrast */
     text-align: justify; /* Align text for a clean look */
-    background-color: #f9f9f9; /* Light background to make it stand out */
+    background-color: #f9f9f9; /* Light event posterto make it stand out */
     padding: 15px; /* Add padding around the text */
     border-radius: 5px; /* Slight rounding for softer edges */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
@@ -96,7 +96,7 @@ header h1 {
     max-height: 450px; /* Define a consistent height */
     margin: auto;
     overflow: hidden; /* Ensure no overflow */
-    background-color: #f0f0f0; /* Optional: add a neutral background */
+    background-color: #f0f0f0; /* Optional: add a neutral event poster*/
     border-radius: 10px; /* Optional: round the corners */
 }
 .slide img {
