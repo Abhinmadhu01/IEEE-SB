@@ -65,104 +65,122 @@ section {
 
 
 
+
+/* General container styling for scalable grid layout */
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid; /* Enables grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive column sizing */
+    gap: 40px; /* Space between items */
     padding: 20px;
-    gap: 20px;
 }
 
-/* Event box styles */
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
+/* Styling for individual event boxes (same as above) */
 .event-box {
-    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%; /* Fills grid cell */
     border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: calc(33.33% - 20px);
-    margin-bottom: 30px;
-    border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    overflow: hidden;
-    position: relative;
+    transition: transform 0.3s ease;
 }
 
 .event-box:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.image-container {
-    overflow: hidden;
-    display: block;
-}
-
+/* Styling for the image container (same as above) */
 .image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 75%; /* Make the image take up the full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the entire image is visible without cropping */
+    border-radius: 10px; /* Optional: Rounds the corners of the image */
+    transition: transform 0.3s ease; /* Optional: Smooth zoom effect on hover */
 }
+
+/* Optional: Add a hover effect to zoom the image slightly */
+.image-container img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
 
 .event-details {
-    padding: 15px;
-    background-color: #f9f9f9;
-    text-align: left;
-    border-top: 1px solid #ddd;
-
+    margin-top: 10px;
 }
 
 .event-title {
-    font-size: 1.5em;
-    color: #03294f;
-    margin-bottom: 10px;
-     
-
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.event-location, .event-description {
-    font-size: 1em;
-    margin-bottom: 5px;
-    color: #666;
-    
-}
-
+.event-location,
 .event-description {
-    margin-top: 10px;
-    line-height: 1.5;
-    white-space: normal;
-    text-align: justify;
-    
+    font-size: 14px;
+    color: #555;
 }
 
-@media screen and (max-width: 768px) {
-    .event-box {
-        width: calc(50% - 20px);
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .event-box {
-        width: 100%;
-    }
-}
-.event-details button {
-    margin-top: 10px;
+button {
     background-color: #007bff;
     color: white;
     border: none;
-    padding: 10px 15px;
-    font-size: 1em;
-    border-radius: 5px;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Modal container (hidden by default) */
+.modal {
+    display: none; /* Hidden initially */
+    position: fixed;
+    z-index: 1000; /* On top of other elements */
+    left:0 ;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Black semi-transparent background */
+}
+
+/* Modal image content */
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%; /* Limit image size */
+    max-height: 90%;
+    border-radius: 0px;
+    padding-top:1%;
+}
+
+/* Caption (optional, for alt text) */
+#caption {
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
     cursor: pointer;
 }
 
-.event-box button:hover {
-    background-color: #0056b3;
+.close:hover {
+    color: gray;
 }
 
 

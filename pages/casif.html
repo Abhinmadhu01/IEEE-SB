@@ -37,54 +37,66 @@
 
     <!-- Main Content -->
     <div class="container">
-
-        <div class="row">
-            <!-- Event 1 -->
-
-            <div class="event-box">
-                <a href="eventspages/inaugrationieee.html"style="text-decoration: none">
-                    <div class="image-container">
-                        <img src="../images/Event Posters/Cassif/cassif.jpg" alt="Event Poster 1">
-                    </div>
-                    <div class="event-details">
-                        <div class="event-title"> CASSIF 2024</div>
-                        <div class="event-location">Location: Auditorium 1</div>
-                        <div class="event-description">Description :A brief description of event 1</div>
-                        <a href="https://en.wikipedia.org/wiki/Linear_time-invariant_system"style="text-decoration: none">
-                            <button>Register Event</button>
-                        </a>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Event 2 -->
-            <div class="event-box">
-                <a href="eventspages/figma.html"style="text-decoration: none">
-                    <div class="image-container">
-                        <img src="../images/Event Posters/Cassif/cassif poster.jpg"alt="Event Poster 2">
-                    </div>
-                    <div class="event-details">
-                        <div class="event-title">IEEE CASSIF 2024 </div>
-                        <div class="event-location">Location: Conference Hall</div>
-                        <div class="event-description">Description: A brief description of event 2.</div>
+        <!-- Event 1 -->
+        <div class="event-box">
+            
+                <div class="image-container">
+                    <img src="../images/Event Posters/Cassif/poster 1.jpeg" alt="Poster Competition">
+                </div>
+                <div class="event-details">
+                    <div class="event-title">CASSIF 2024</div>
+                    <div class="event-location">Location: Auditorium 1</div>
+                    <div class="event-description">Description: A brief description of event 1</div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdMo6ZzSbRXX5GbonOlpQqFhe7v66IS16pKAcbEzdX8Ydf-qA/viewform?usp=sf_link">
                         <button>Register Event</button>
-                    </div>
-                </a>
-            </div>
+                       
+                    </a>
+                    
+                    
 
-
-  
-
-
-
-
-
-
-
-
-
+                </div>
+            </a>
         </div>
+    
+        <!-- Event 2 -->
+        <div class="event-box">
+            
+                <div class="image-container">
+                    <img src="../images/Event Posters/Cassif/cassif.jpg" alt="">
+                </div>
+                <div class="event-details">
+                    <div class="event-title">IEEE CASSIF 2024</div>
+                    <div class="event-location">Location: Conference Hall</div>
+                    <div class="event-description">Description: A brief description of event 2</div>
+                    <a href="">
+                        <button>Register Event</button>
+                    </a>
+                       
+                </div>
+            </a>
+        </div>
+        <div class="event-box">
+            
+                <div class="image-container">
+                    <img src="../images/Event Posters/Cassif/Cassif poster.jpg" alt="">
+                </div>
+                <div class="event-details">
+                    <div class="event-title">IEEE CASSIF 2024</div>
+                    <div class="event-location">Location: Conference Hall</div>
+                    <div class="event-description">Description: A brief description of event 2</div>
+                    <a href="">
+                        <button>Register Event</button>  
+                    </a>
+                </div>
+            </a>
+        </div>
+        
+    
+        <!-- Additional Events -->
+        <!-- Add more .event-box elements here -->
     </div>
+    
+    
 
     <!-- Footer -->
     <footer>
@@ -125,6 +137,11 @@
             </ul>
         </div>
     </footer>
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
 
     <!-- JavaScript for Navbar Toggle -->
     <script>
@@ -132,7 +149,36 @@
             document.querySelector('.nav-container').classList.toggle('active');
         });
     </script>
-
+    <script>
+        // Get the modal
+        const modal = document.getElementById("imageModal");
+    
+        // Get the image in the modal and caption
+        const modalImg = document.getElementById("modalImage");
+        const captionText = document.getElementById("caption");
+    
+        // Attach click events to all images
+        document.querySelectorAll(".image-container img").forEach((img) => {
+            img.addEventListener("click", () => {
+                modal.style.display = "block"; // Show modal
+                modalImg.src = img.src; // Set modal image to clicked image
+                captionText.innerText = img.alt; // Set caption (if alt exists)
+            });
+        });
+    
+        // Close modal on clicking the close button
+        document.querySelector(".close").addEventListener("click", () => {
+            modal.style.display = "none"; // Hide modal
+        });
+    
+        // Close modal on clicking outside the modal image
+        modal.addEventListener("click", (event) => {
+            if (event.target === modal) {
+                modal.style.display = "none"; // Hide modal
+            }
+        });
+    </script>
+    
 </body>
 
 </html>
